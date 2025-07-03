@@ -73,7 +73,7 @@ def initialize_agent():
             }
         )
         tools = await client.get_tools()
-        return create_react_agent("openai:gpt-4o", tools)
+        return create_react_agent("openai:gpt-4o-mini", tools)
 
     return loop.run_until_complete(_initialize())
 
