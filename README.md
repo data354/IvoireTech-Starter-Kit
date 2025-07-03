@@ -1,134 +1,150 @@
 # IvoireTech Starter Kit 🚀
-An intelligent AI agent designed for hackathons, enabling data search, analysis and automatic visualization.
+Un agent IA intelligent conçu pour les hackathons, permettant la recherche de données, l'analyse et la visualisation automatique.
 
-## 🌟 Features
-- **Conversational AI agent** with intuitive chat interface
-- **Data search** via integrated MCP server
-- **Automatic analysis** of data
-- **Interactive visualization** with automatic graph generation
-- **Modern interface** with Streamlit
-- **Real-time generation stop**
+## 🌟 Fonctionnalités
+- **Agent IA conversationnel** avec interface de chat intuitive
+- **Recherche de données** via serveur MCP intégré
+- **Analyse automatique** des données
+- **Visualisation interactive** avec génération automatique de graphiques
+- **Interface moderne** avec Streamlit
+- **Arrêt de génération en temps réel**
 
-## 📋 Prerequisites
-- Python 3.8 or higher
-- Internet access for MCP server queries
-- OpenAI API key (if using OpenAI model)
+## 📋 Prérequis
+- Python 3.8 ou version supérieure
+- Accès Internet pour les requêtes du serveur MCP
+- Clé API OpenAI (si vous utilisez le modèle OpenAI)
 
 ## 🛠️ Installation
 
-### 1. Clone the project
+### 1. Cloner le projet
 ```bash
 git clone https://github.com/data354/IvoireTech-Starter-Kit.git
 cd IvoireTech-Starter-Kit
 ```
 
-### 2. Create a virtual environment
+### 2. Créer un environnement virtuel
 ```bash
 python -m venv .venv
-# Activate the environment
-# On Windows
+# Activer l'environnement
+# Sur Windows
 .venv\Scripts\activate
-# On macOS/Linux
+# Sur macOS/Linux
 source .venv/bin/activate
 ```
 
-### 3. Install dependencies
+### 3. Installer les dépendances
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Environment variables configuration
-Create a `.env` file at the project root:
+### 4. Configuration des variables d'environnement
+Créer un fichier `.env` à la racine du projet :
 ```env
-OPENAI_API_KEY=your_openai_api_key_here
+OPENAI_API_KEY=votre_cle_api_openai_ici
 ```
 
-## 🚀 Launching the application
+## 🚀 Lancement de l'application
 
-### Method 1: Standard launch
+### Méthode 1 : Lancement standard
 ```bash
 streamlit run client.py
 ```
 
-### Method 2: With custom configuration
+### Méthode 2 : Avec configuration personnalisée
 ```bash
 streamlit run client.py --server.port 8501 --server.address 0.0.0.0
 ```
 
-The application will be accessible at: `http://localhost:8501`
+L'application sera accessible à l'adresse : `http://localhost:8501`
 
-## 💡 Usage
+## 💡 Utilisation
 
-### Main interface
-1. **Chat area**: Ask questions to the AI agent
-2. **Sidebar**: Project information and reset button
-3. **Automatic visualizations**: Charts display automatically when tabular data is detected
+### Interface principale
+1. **Zone de chat** : Posez des questions à l'agent IA
+2. **Barre latérale** : Informations sur le projet et bouton de réinitialisation
+3. **Visualisations automatiques** : Les graphiques s'affichent automatiquement lorsque des données tabulaires sont détectées
 
-### Example queries
+### Exemples de requêtes
 ```
-"Can you give me data on the Ivorian population?"
-"Analyze the economic trends of Côte d'Ivoire"
-"Search for information on the agricultural sector"
+"Peux-tu me donner des données sur la population ivoirienne ?"
+"Analyse les tendances économiques de la Côte d'Ivoire"
+"Recherche des informations sur le secteur agricole"
 ```
 
-### Advanced features
-- **Generation stop**: Click "⏹️ Stop generation" to interrupt a response
-- **Automatic charts**: Tables in responses are automatically converted to charts
-- **Persistent history**: Your conversations are saved during the session
+### Fonctionnalités avancées
+- **Arrêt de génération** : Cliquez sur "⏹️ Arrêter la génération" pour interrompre une réponse
+- **Graphiques automatiques** : Les tableaux dans les réponses sont automatiquement convertis en graphiques
+- **Historique persistant** : Vos conversations sont sauvegardées pendant la session
 
 ## 🔧 Configuration
 
-### MCP Server
-The client connects to the hosted MCP server:
-- URL: `https://mcp-server-626474317752.europe-west1.run.app/mcp/`
-- Transport: `streamable_http`
+### Serveur MCP
+Le client se connecte au serveur MCP hébergé :
+- URL : `https://mcp-server-626474317752.europe-west1.run.app/mcp/`
+- Transport : `streamable_http`
 
-### AI Model
-- Model used: `openai:gpt-4o`
-- Framework: LangGraph with ReAct agent
+### Modèle IA
+- Modèle utilisé : `openai:gpt-4o`
+- Framework : LangGraph avec agent ReAct
 
-## 📊 Visualizations
-The application automatically generates charts from tabular data:
-- **Automatic detection** of tables in responses
-- **Conversion to DataFrame** Pandas
-- **Interactive charts** with Plotly
-- **Supported types**: Bar charts, line charts, etc.
+## 📊 Visualisations
+L'application génère automatiquement des graphiques à partir de données tabulaires :
+- **Détection automatique** des tableaux dans les réponses
+- **Conversion en DataFrame** Pandas
+- **Graphiques interactifs** avec Plotly
+- **Types supportés** : Graphiques en barres, courbes, etc.
 
-## 🐛 Troubleshooting
+## 🐛 Résolution des problèmes
 
-### Common issues
-1. **MCP connection error**
+### Problèmes courants
+1. **Erreur de connexion MCP**
    ```
-   Check your Internet connection
-   The MCP server must be accessible
-   ```
-
-2. **OpenAI API error**
-   ```
-   Check your API key in the .env file
-   Make sure you have sufficient credits
+   Vérifiez votre connexion Internet
+   Le serveur MCP doit être accessible
    ```
 
-3. **Dependencies issue**
+2. **Erreur API OpenAI**
+   ```
+   Vérifiez votre clé API dans le fichier .env
+   Assurez-vous d'avoir suffisamment de crédits
+   ```
+
+3. **Problème de dépendances**
    ```bash
    pip install --upgrade -r requirements.txt
    ```
 
-### Logs and debugging
-For more details on errors:
+### Logs et débogage
+Pour plus de détails sur les erreurs :
 ```bash
 streamlit run client.py --logger.level debug
 ```
 
-## 📦 Project structure
+## 📦 Structure du projet
 ```
 IvoireTech-Starter-Kit/
-├── client.py                 # Main application
-├── requirements.txt          # Python dependencies
-├── .env                     # Environment variables
+├── client.py                 # Application principale
+├── requirements.txt          # Dépendances Python
+├── .env                     # Variables d'environnement
 ├── README.md               # Documentation
-└── .venv/                  # Virtual environment
+└── .venv/                  # Environnement virtuel
 ```
+
+## 🤝 Contribution
+Les contributions sont les bienvenues ! N'hésitez pas à :
+- Signaler des bugs
+- Proposer de nouvelles fonctionnalités
+- Améliorer la documentation
+- Soumettre des pull requests
+
+## 📄 Licence
+Ce projet est sous licence MIT. Consultez le fichier LICENSE pour plus de détails.
+
+## 🆘 Support
+Pour toute question ou problème :
+- Ouvrez une issue sur GitHub
+- Contactez l'équipe de développement
+- Consultez la documentation
 
 ---
 **IvoireTech Starter Kit** - 🇨🇮
