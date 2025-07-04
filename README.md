@@ -170,8 +170,9 @@ Pour toute question ou problème :
 - Ouvrez une issue sur GitHub
 - Contactez l'équipe de développement
 - Consultez la documentation
+
 ## Images du client
-- ![alt text](image.png)
+![alt text](image.png)
 
 ## Ressources additionnelles
 - Lien d'un client notebook : `https://colab.research.google.com/drive/1jLcCBro-Hm0_sUILKhvACiQYfMQ2t6aO?usp=sharing`
