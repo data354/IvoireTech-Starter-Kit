@@ -175,6 +175,7 @@ Pour toute question ou problème :
 ![alt text](image.png)
 
 ## Ressources additionnelles
+- Repo du Server MCP : `https://github.com/data354/McpServer_DataFair.git`
 - Lien d'un client notebook : `https://colab.research.google.com/drive/1jLcCBro-Hm0_sUILKhvACiQYfMQ2t6aO?usp=sharing`
 - Google Gen AI SDK: `https://github.com/googleapis/python-genai`
 - Documentation Google Gen AI SDK : `https://googleapis.github.io/python-genai/`
