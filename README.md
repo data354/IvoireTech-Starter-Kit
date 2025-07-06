@@ -171,6 +171,16 @@ Pour toute question ou problème :
 - Contactez l'équipe de développement
 - Consultez la documentation
 
+
+## Déploiement sur HuggingFace avec Docker
+- Créez une image Docker de votre projet ( voir le fichier Dockerfile)
+- Créez un nouveau space
+- Remplir le formulaire et selectionnez "Docker"
+- Uploader votre application sans le ".env"
+- Rendez-vous dans les paramettres pour ajouter vos clés secretes
+- Votre application sera en ligne avec succès après quelques minutes !!
+
+
 ## Images du client
 ![alt text](image.png)
 
